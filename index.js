@@ -3,6 +3,7 @@ const moment = require('moment');
 const argv = require('minimist')(process.argv.slice(2));
 const Promise = require('bluebird');
 const processTasks = require('./task-utils');
+const fs = require('fs');
 
 const since = argv.since || moment().add(-1, 'month').format('YYYY-MM-DD');
 const until = argv.until || moment().format('YYYY-MM-DD');
